@@ -25,10 +25,8 @@ function showMap(searchTerm="Boston"){
   var url = 'http://api.openweathermap.org/data/2.5/weather';
   var data = {
     q: searchTerm,
-    APPID: '2899318099685a1995a99a5538d3c3ae'
+    APPID: '//'
   }
 
   $.get(url, data, initMap);
 }
-
-// AIzaSyCALgB3n94GcI03ZgC5nHIMVmslgkDPY4o

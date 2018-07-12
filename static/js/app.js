@@ -17,7 +17,7 @@ $("#search_weather").submit(event => {
   var url = 'http://api.openweathermap.org/data/2.5/weather';
   var data = {
     q: searchTerm,
-    APPID: '2899318099685a1995a99a5538d3c3ae'
+    APPID: '//'
   }
 
   function convertDeg(degree){
