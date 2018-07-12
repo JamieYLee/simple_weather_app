@@ -1,11 +1,16 @@
+// calling header.html
 $.get('../../components/header.html', function(response) {
   $("#nav").html(response);
 });
 
+// showing no contents before city is entered
 $("#weather-info").css("display", "none");
 
+// events after city name completed
 $("#search_weather").submit(event => {
+  // stop the current basic movement
   event.preventDefault();
+  // get a city data value from input
   var searchTerm = $("#city_search").val();
   console.log(searchTerm);
 
@@ -26,6 +31,7 @@ $("#search_weather").submit(event => {
     $("#forecast").html(response.weather[0].main);
     $("#humidity").html(response.main.humidity + "%");
 
+    // click the button one more time and hide the result
     $("#weather-info").css("display", "block");
   }
 
